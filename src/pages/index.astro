@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Banner from "../components/Banner.vue";
+import Works from "../components/Works.vue";
 ---
 
 <Layout title="Bruno Yu">
   <main>
     <Navbar />
     <Banner />
+    <Works client:only />
     <Footer />
   </main>
 </Layout>
