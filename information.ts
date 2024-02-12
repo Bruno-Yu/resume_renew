@@ -1,6 +1,9 @@
 export type  menuItem = {
+  menuTab: string
   title: string
+  id: string
   link: string
+  hidden: boolean
 }
 
 // common
@@ -30,16 +33,32 @@ export const socialMedia = [
 // menu
 export const menuContent:  menuItem[] = [
   {
-    title: '關於',
-    link: '#about'
+    menuTab: '/',
+    title: '' ,
+    id: '',
+    link: '#',
+    hidden: true,
   },
   {
-    title: '作品',
-    link: '#works'
+    menuTab: '關於',
+    title: 'About\u0020關於' ,
+    id: 'about',
+    link: '#about',
+    hidden: false,
   },
   {
-    title: '聯繫',
-    link: '#contact'
+    menuTab: '作品',
+    title: 'Works\u0020作品' ,
+    id: 'works',
+    link: '#works',
+    hidden: false,
+  },
+  {
+    menuTab: '聯繫',
+    title: 'Contact\u0020聯繫' ,
+    id: 'contact',
+    link: '#contact',
+    hidden: false,
   }
 ]
 

@@ -5,14 +5,33 @@ import Footer from "../components/Footer.vue";
 import Banner from "../components/Banner.vue";
 import About from "../components/About.vue";
 import Works from "../components/Works.vue";
+import Contact from "../components/Contact.vue";
+import { menuContent } from "../../information";
 ---
 
 <Layout title="Bruno Yu">
   <main>
-    <Navbar />
+    <ul class="fixed z-10 right-0 2xl:right-5 bottom-5 w-[50px] h-[100px]">
+      <li>
+        <a href={menuContent[0].link} class="block"
+          ><span class="material-symbols-outlined text-5xl text-secondary">
+            arrow_circle_up
+          </span></a
+        >
+      </li>
+      <li>
+        <a href={menuContent[3].link} class="block"
+          ><span class="material-symbols-outlined text-5xl text-secondary">
+            mail</span
+          ></a
+        >
+      </li>
+    </ul>
+    <Navbar client:only menuContent={menuContent} />
     <Banner />
-    <About />
-    <Works client:only />
+    <About client:only titleInfo={menuContent[1]} />
+    <Works client:only titleInfo={menuContent[2]} />
+    <Contact client:only titleInfo={menuContent[3]} />
     <Footer />
   </main>
 </Layout>
