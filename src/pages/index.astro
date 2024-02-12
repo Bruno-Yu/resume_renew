@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Banner from "../components/Banner.vue";
+import About from "../components/About.vue";
 import Works from "../components/Works.vue";
 ---
 
@@ -10,6 +11,7 @@ import Works from "../components/Works.vue";
   <main>
     <Navbar />
     <Banner />
+    <About />
     <Works client:only />
     <Footer />
   </main>

@@ -1,7 +1,7 @@
 <template>
   <div>
   <footer class="border-t-2 py-6 text-center">
-    <p class="text-gray-400 text-sm">© {{ bannerContent.name }}. All Rights Reserved</p>
+    <p class="text-gray-400 text-sm">© {{ selfContent.name }}. All Rights Reserved</p>
   </footer>
   </div>
 </template>
@@ -13,6 +13,6 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { bannerContent } from "../../information"
+import { selfContent } from "../../information"
 
 </script>
