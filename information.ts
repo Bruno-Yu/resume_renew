@@ -1,57 +1,4 @@
-export type  menuItem = {
-  menuTab: string
-  title: string
-  id: string
-  link: string
-  hidden: boolean
-}
-
-export type socialItem = {
-  name: string
-  icon: string
-  link: string
-}
-
-// skill & experience
-export type aboutItem = {
-  name: string
-  details: string[]
-}
-
-// works
-export type workItem = {
-    cover_img: string
-    title:  string
-    description:  string
-    skills: string
-    repo_url:  string
-    page_url:  string
-}
-
-// selfContent description
-export type  description = {
-    name:string
-    content: string
-    about: string
-    en_about: string
-  }
-
-// selfContent avatar
-export type avatar = {
-    pc:string
-    mobile: string
-  }
-
-export interface selfcontent {
-  cnName: string
-  enName:string
-  description:description 
-  name: string
-  career: string,
-  avatar: avatar
-}
-
-export type dataType = menuItem | socialItem | aboutItem | workItem | description | avatar | selfcontent
+import type {menuItem, socialItem,  selfcontent, aboutItem, workItem} from "./types/information";
 
 // common
 export const socialMedia:socialItem[] = [
@@ -116,8 +63,8 @@ export const selfContent: selfcontent = {
   description: {
     name:'我是布魯諾，' ,
     content: '是名前端開發者' ,
-    about: '您好，我是余俊毅，一位前端開發人員！我深信在這變幻莫測的世界中，持續精進自己是不可或缺的軟實力。從對程式的好奇開始，經歷了六角的程式訓練，這段歷程不僅在興趣中磨練了基本技能，更培養了對新技術持續探索的熱忱和卓越的自學能力。當遇到陌生的領域，我會主動查找相關資源進行補充學習（如 MDN、W3C、Stack Overflow），在解決問題的過程中深刻體會到新技術的誕生常源自對當前問題的深刻理解。我深信「科技始於人性」，並渴望加入一個共同成長的團隊，攜手打造卓越的數位產品。',
-    en_about: 'Hello, I’m Bruno Yu, an frontend developer!I firmly believe that continuous self-improvement is an indispensable soft skill in this ever-changing world. Starting from a curiosity about programming, I went through intensive training at HexSchool. This journey not only honed my fundamental skills within my interests but also cultivated a passion for continuous exploration of new technologies and exceptional self-learning abilities. When faced with unfamiliar domains, I proactively seek relevant resources for supplementary learning (such as MDN, W3C, Stack Overflow). Throughout problem-solving, I’ve come to understand that the birth of new technologies often stems from a profound understanding of current challenges. I deeply resonate with the phrase ‘Technology begins with humanity’ and aspire to join a team committed to mutual growth, collaborating to create top-notch digital products.'
+    about: '您好，我是余俊毅，一位前端開發人員！我深信在這變幻莫測的世界中，持續精進自己是不可或缺的軟實力。從對程式的好奇開始，經歷了業界的訓練，這段歷程不僅在興趣中磨練了基本技能，更培養了對新技術持續探索的熱忱和卓越的自學能力。當遇到陌生的領域，我會主動查找相關資源進行補充學習（如 MDN、W3C、Stack Overflow），在解決問題的過程中深刻體會到新技術的誕生常源自對當前問題的深刻理解。我深信「科技始於人性」，並渴望加入一個共同成長的團隊，攜手打造卓越的數位產品。',
+    en_about: 'Hello, I’m Bruno Yu, an frontend developer!I firmly believe that continuous self-improvement is an indispensable soft skill in this ever-changing world. Starting from a curiosity about programming, I went through intensive training at work. This journey not only honed my fundamental skills within my interests but also cultivated a passion for continuous exploration of new technologies and exceptional self-learning abilities. When faced with unfamiliar domains, I proactively seek relevant resources for supplementary learning (such as MDN, W3C, Stack Overflow). Throughout problem-solving, I’ve come to understand that the birth of new technologies often stems from a profound understanding of current challenges. I deeply resonate with the phrase ‘Technology begins with humanity’ and aspire to join a team committed to mutual growth, collaborating to create top-notch digital products.'
   },
   name: 'Bruno\u0020YU',
   career: 'Front-end\u0020Developer',

@@ -56,7 +56,7 @@ export default {
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 import { selfContent, skills, experience, socialMedia } from "../../information"
-import type { selfcontent, aboutItem, socialItem } from "../../information"
+import type { selfcontent, aboutItem } from "../../types/information"
 import { dataConverter } from '../utils/index'
 const convertedSelf: selfcontent = dataConverter(selfContent)
 const convertedSkills: aboutItem[] = dataConverter(skills)
