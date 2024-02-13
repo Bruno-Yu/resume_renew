@@ -48,6 +48,7 @@
           </div>
         </div> 
       </swiper-slide>
+      <swiper-pagination />
       </swiper>
     </div> 
   </section>
@@ -76,7 +77,7 @@ export default {
   props: [
     'titleInfo'
   ],
-  setup(props) {
+  setup(props: any) {
     const { titleInfo } = props
     const { title, id } = titleInfo
     return {

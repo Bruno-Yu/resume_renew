@@ -11,6 +11,7 @@
 	}
 	html {
 		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 	code {
 		font-family:
@@ -28,4 +29,36 @@
 	font-size: 3rem;
 	font-weight: 900;
   text-shadow: -4px -2px 2px rgb(255, 203, 66);
+}
+
+@keyframes stamp-rotate {
+  from {
+    opacity: 0.2;
+    scale: 0.8;
+		transform: rotate(0);
+  }
+	to {
+		scale: 0.9;
+		transform: rotate(360deg);
+	}
+}
+
+.stamp {
+  animation: stamp-rotate ease-in both;
+  animation-timeline: view();
+  animation-range: entry 25% cover calc(100% - 10vh);
+}
+
+@keyframes icon-hover {
+  from {
+		transform: translateY(0px);
+  }
+	to {
+		transform: translateY(5px);
+	}
+}
+
+.float_icons:hover {
+	animation: icon-hover 0.1s infinite alternate both;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }

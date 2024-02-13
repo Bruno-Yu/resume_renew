@@ -6,8 +6,55 @@ export type  menuItem = {
   hidden: boolean
 }
 
+export type socialItem = {
+  name: string
+  icon: string
+  link: string
+}
+
+// skill & experience
+export type aboutItem = {
+  name: string
+  details: string[]
+}
+
+// works
+export type workItem = {
+    cover_img: string
+    title:  string
+    description:  string
+    skills: string
+    repo_url:  string
+    page_url:  string
+}
+
+// selfContent description
+export type  description = {
+    name:string
+    content: string
+    about: string
+    en_about: string
+  }
+
+// selfContent avatar
+export type  avatar = {
+    pc:string
+    mobile: string
+  }
+
+export interface selfcontent {
+  cnName: string
+  enName:string
+  description:description 
+  name: string
+  career: string,
+  avatar: avatar
+}
+
+export type dataType = menuItem | socialItem | aboutItem | workItem | description | avatar | selfContent
+
 // common
-export const socialMedia = [
+export const socialMedia:socialItem[] = [
   {
     name: 'Github',
     icon: 'src/assets/icons/github.svg',
@@ -16,12 +63,12 @@ export const socialMedia = [
   {
     name: 'Email',
     icon: 'src/assets/icons/envelope.svg',
-    link: 'https://www.cakeresume.com/s--3QltBjc_WfUv2lo-j1NZmg--/jackhellowin',
+    link: 'mailto:jackhellowin@gmail.com',
   },
   {
     name: 'Linkedin',
     icon: 'src/assets/icons/linkedin.svg',
-    link: 'https://www.cakeresume.com/s--3QltBjc_WfUv2lo-j1NZmg--/jackhellowin',
+    link: 'https://www.linkedin.com/in/bruno-yu-357415253',
   },
     {
     name: 'CakeResume',
@@ -63,13 +110,14 @@ export const menuContent:  menuItem[] = [
 ]
 
 // banner & about's description
-export const selfContent = {
+export const selfContent: selfcontent = {
   cnName: '余俊毅',
   enName: 'Chin-Yi\u0020YU',
   description: {
     name:'我是布魯諾，' ,
-    content: '現在是名前端工程師' ,
-    about: '嗨，我是余俊毅，是個前端開發人員!我深信在這多變的世界裡持續精進自己是必備的軟實力，從初識程式的好奇到經歷六角的程式訓練，在過程中除了在興趣中磨練基本功外，更培養了對於新技術持續探索的熱忱與良好的自學能力，倘若遇到不孰悉的範疇，會自行查找相關資源補充學習 ( MDN、W3C、Stack Overflow ) ，在解決問題的過程中理解到往往新技術的誕生是源自於當下所遇到的問題而對於"科技始於人性"這句話有更深的感觸，希望能加入共同成長的團隊，一起打造一流的數位產品。'
+    content: '是名前端開發者' ,
+    about: '您好，我是余俊毅，一位前端開發人員！我深信在這變幻莫測的世界中，持續精進自己是不可或缺的軟實力。從對程式的好奇開始，經歷了六角的程式訓練，這段歷程不僅在興趣中磨練了基本技能，更培養了對新技術持續探索的熱忱和卓越的自學能力。當遇到陌生的領域，我會主動查找相關資源進行補充學習（如 MDN、W3C、Stack Overflow），在解決問題的過程中深刻體會到新技術的誕生常源自對當前問題的深刻理解。我深信「科技始於人性」，並渴望加入一個共同成長的團隊，攜手打造卓越的數位產品。',
+    en_about: 'Hello, I’m Bruno Yu, an frontend developer!I firmly believe that continuous self-improvement is an indispensable soft skill in this ever-changing world. Starting from a curiosity about programming, I went through intensive training at HexSchool. This journey not only honed my fundamental skills within my interests but also cultivated a passion for continuous exploration of new technologies and exceptional self-learning abilities. When faced with unfamiliar domains, I proactively seek relevant resources for supplementary learning (such as MDN, W3C, Stack Overflow). Throughout problem-solving, I’ve come to understand that the birth of new technologies often stems from a profound understanding of current challenges. I deeply resonate with the phrase ‘Technology begins with humanity’ and aspire to join a team committed to mutual growth, collaborating to create top-notch digital products.'
   },
   name: 'Bruno\u0020YU',
   career: 'Front-end\u0020Developer',
@@ -80,36 +128,48 @@ export const selfContent = {
 }
 
 // About ( skills )
-export const skills = [
+export const skills: aboutItem[] = [
   {
     name: 'Vue',
-    details: ['Vue3','Vue\u0020Cli', '元件管理', 'SPA', 'Vue\u0020Router', 'Axios']
+    details: ['會使用 Vue Cli, Vite, nuxt3 ','使用 Composition API 以及 Option API 開發專案 ', '使用 Vue Axios 串接 API 資料 ', '曾使用 nuxt2 團隊合作開發大型專案', '使用狀態管理工具管理全域狀態 ex: vuex, pinia ']
+  },
+  {
+    name: 'JavaScript / TypeScript',
+    details: ['使用 GSAP, jQuery 實作網頁互動效果 ', '透過 AJAX / JSON 串接 RESTful API ', '使用 ESLint 管理程式碼品質 ', '了解 ES6 語言特性' ,'與團隊合作，使用 Typescript 開發大型專案 ']
   },
   {
     name: 'React',
-    details: ['Create\u0020React\u0020App', 'React\u0020Hook', 'Context,\u0020props']
-  },
-  {
-    name: 'JavaScript',
-    details: ['AJAX 串接 RESTful API', 'ES6', 'swiper.js']
+    details: ['使用 Create React App 完成新專案建立 ', '使用 React Hook ', '使用 Context 以及 props 進行元件間的溝通', '以此完成 todo list 等小工具']
   },
   {
     name: 'WebLayout',
-    details: ['HTML5,\u0020CSS,\u0020SCSS', 'Tailwind', 'BootStrap\u00205']
+    details: ['熟悉 HTML 5, CSS 3, Scss', 'RWD 響應式網頁規劃 ( 手刻 / 套件皆有 )', '熟悉 Bootstrap 5 ','熟悉 Tailwind CSS', '熟悉 element UI 使用']
   },
   {
     name: 'Git',
-    details: ['GitHub\u0020Pages,Git\u0020指令', 'sourcetree']
+    details: ['使用 GitHub Page 部屬靜態網頁','孰悉 Git 指令 ', '使用 sourcetree 版本控制介面 ', '團隊合作，共同使用 Git 開發＆維護大型專案'], 
   },
   {
-    name: '語言能力',
+    name: '語言能力(英文)',
     details: ['TOEIC\u0020listening\u0020and\u0020reading\u0020940/990','TOEIC speaking 140/200', 'TOEIC writing 150/200']
   },
 ]
 
+// experience
+export const experience: aboutItem[] = [
+  {
+    name: '萬點國際任職前端工程師 ( Dec 2022 ~ now )',
+    details: [
+      '協同開發大型專案 - 龍巖公司的內外網站系統  ( nuxt 2, element ui, web components )',
+      '協同開發高雄港務局內部系統 ( vue2, vue-class-component, Typescript, echarts, vue-grid-layout )'
+    ]
+  }
+]
+
+
 // works 
 
-export const works = [
+export const works:workItem[] = [
   {
     cover_img: 'src/assets/images/work01.webp',
     title: 'NFT GEL',

@@ -18,14 +18,14 @@
               </div>
               <div class="col hidden xl:block">
                   <ul class="flex gap-3 items-center">
-                      <li v-for="media in socialMedia" :key="media.name"><a :href="media.link" class="block"><img class="w-4 h-4 inline" :src="media.icon" :alt="media.name"/> </a></li>
+                      <li v-for="media in socialMedia" :key="media.name"><a :href="media.link" class="block" target="_blank"><img class="w-4 h-4 inline" :src="media.icon" :alt="media.name"/> </a></li>
                   </ul>
               </div>
             </div>
           </div>
           <div class="col-span-12 mt-5 lg:mt-0 lg:z-20 bg-black/60 h-full px-5 py-6">
-            <h2 class="text-primary text-7xl font-bold text-center lg:text-start">{{ selfContent.name }}</h2>
-            <h3 class="text-primary font-bold  text-center lg:text-start" > {{ selfContent.career }}</h3>
+            <h2 class="text-primary text-7xl font-bold text-start md:text-center lg:text-start">{{ selfContent.name }}</h2>
+            <h3 class="text-primary font-bold  text-start md:text-center lg:text-start" > {{ selfContent.career }}</h3>
           </div>
         </div>
       </div>

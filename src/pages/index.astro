@@ -11,22 +11,28 @@ import { menuContent } from "../../information";
 
 <Layout title="Bruno Yu">
   <main>
+    <!-- 右下角功能導覽 -->
     <ul class="fixed z-10 right-0 2xl:right-5 bottom-5 w-[50px] h-[100px]">
       <li>
-        <a href={menuContent[0].link} class="block"
-          ><span class="material-symbols-outlined text-5xl text-secondary">
+        <a href={menuContent[0].link} class="float_icons group block"
+          ><span
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-primary"
+          >
             arrow_circle_up
           </span></a
         >
       </li>
       <li>
-        <a href={menuContent[3].link} class="block"
-          ><span class="material-symbols-outlined text-5xl text-secondary">
+        <a href={menuContent[3].link} class="float_icons group block"
+          ><span
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-primary"
+          >
             mail</span
           ></a
         >
       </li>
     </ul>
+    <div class="bg-white h-16"></div>
     <Navbar client:only menuContent={menuContent} />
     <Banner />
     <About client:only titleInfo={menuContent[1]} />
