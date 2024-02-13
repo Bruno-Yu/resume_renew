@@ -3,10 +3,10 @@
     <div class="grid grid-cols-12 h-full border-gray-500 border-y-4">
       <div class="col-span-full lg:col-span-8 bg-primary lg:relative">
         <!-- deco svg -->
-        <img class="hidden lg:block absolute left-4 top-7" src="../assets/images/cure_1.svg" alt="cure_1" width="50px" height="50px"/>
-        <img class="hidden lg:block absolute object-cover w-7 h-12 left-1 bottom-4" src="../assets/images/Dots_Square.webp" alt="cure_2" >
-        <img class="hidden lg:block absolute object-cover w-12 h-7 left-[70%] top-1" src="../assets/images/Dots_Square.webp" alt="cure_3" >
-        <img class="hidden lg:block absolute object-cover w-12 h-12 left-[90%] bottom-0" src="../assets/images/Dots_Square.webp" alt="cure_4" >
+        <img class="hidden lg:block absolute left-4 top-7" :src="`${imgPath}/images/cure_1.svg`" alt="cure_1" width="50px" height="50px"/>
+        <img class="hidden lg:block absolute object-cover w-7 h-12 left-1 bottom-4" :src="`${imgPath}/images/Dots_Square.webp`" alt="cure_2" />
+        <img class="hidden lg:block absolute object-cover w-12 h-7 left-[70%] top-1" :src="`${imgPath}/images/Dots_Square.webp`" alt="cure_3" />
+        <img class="hidden lg:block absolute object-cover w-12 h-12 left-[90%] bottom-0" :src="`${imgPath}/images/Dots_Square.webp`" alt="cure_4" />
         <!-- 手機板頭像 -->
         <img class="block lg:hidden rounded-full bg-white border border-3 border-black mx-auto my-2 object-cover bg-center  w-40 h-40" :src="selfContent.avatar.mobile" alt="avatar" />
         <div class="grid grid-cols-12 lg:absolute w-full lg:w-4/5 left-[10%] bottom-1 items-end">
@@ -31,9 +31,9 @@
       </div>
       <div class="hidden lg:col-span-4 lg:block relative">
         <!-- deco svg -->
-        <img class="hidden lg:inline-block absolute object-cover w-20 h-20 left-[35%] top-8" src="../assets/images/Dots_Square_lg.png" alt="Dots_Square" />
-        <img class=" hidden lg:inline-block absolute object-cover w-9 h-20 left-0 top-35" src="../assets/images/Dots_Square_lg.png" alt="Dots_Square" />
-        <img class="hidden lg:inline-block absolute left-[60%] bottom-1" src="../assets/images/cure_2.svg" width="100px" height="100px" alt="cure_2" />
+        <img class="hidden lg:inline-block absolute object-cover w-20 h-20 left-[35%] top-8" :src="`${imgPath}/images/Dots_Square_lg.png`" alt="Dots_Square" />
+        <img class=" hidden lg:inline-block absolute object-cover w-9 h-20 left-0 top-35" :src="`${imgPath}/images/Dots_Square_lg.png`" alt="Dots_Square" />
+        <img class="hidden lg:inline-block absolute left-[60%] bottom-1" :src="`${imgPath}/images/cure_2.svg`" width="100px" height="100px" alt="cure_2" />
         <div class="grid grid-cols-12 absolute w-full h-full right-[50%] justify-center items-center">
           <div class="col col-span-10 h-80 bg-white border rounded shadow px-2 py-3">
             <!-- pc 大頭貼 -->
@@ -52,6 +52,6 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { selfContent, socialMedia } from "../../information"
+import { selfContent, socialMedia, imgPath } from "../../information"
 
 </script>

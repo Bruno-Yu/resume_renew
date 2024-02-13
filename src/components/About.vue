@@ -3,7 +3,7 @@
     <h2 class="title mt-14 mb-6  text-center" >{{ title }}</h2>
     <div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-12 lg:gap-7">
       <div class="hidden lg:block lg:col-span-3">
-        <img  class="stamp max-w-full h-auto sticky top-0 rounded-full" src="../assets/images/stamp.png" alt="stamp" >
+        <img  class="stamp max-w-full h-auto sticky top-0 rounded-full" :src="`${imgPath}/images/stamp.png`" alt="stamp" />
       </div>
       <div class="lg:col-span-9">
         <div class="w-fulL p-5">
@@ -55,7 +55,7 @@ export default {
 
 <script lang="ts" setup>
 import { defineProps } from 'vue'
-import { selfContent, skills, experience, socialMedia } from "../../information"
+import { selfContent, skills, experience, socialMedia, imgPath } from "../../information"
 import type { selfcontent, aboutItem } from "../../types/information"
 import { dataConverter } from '../utils/index'
 const convertedSelf: selfcontent = dataConverter(selfContent)

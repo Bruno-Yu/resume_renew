@@ -1,25 +1,28 @@
 import type {menuItem, socialItem,  selfcontent, aboutItem, workItem} from "./types/information";
 
+// dev 模式 'public' pro 或 上傳 ''
+export const imgPath = ''
+
 // common
 export const socialMedia:socialItem[] = [
   {
     name: 'Github',
-    icon: 'src/assets/icons/github.svg',
+    icon: `${imgPath}/icons/github.svg`,
     link: 'https://github.com/Bruno-Yu',
   },
   {
     name: 'Email',
-    icon: 'src/assets/icons/envelope.svg',
+    icon: `${imgPath}/icons/envelope.svg`,
     link: 'mailto:jackhellowin@gmail.com',
   },
   {
     name: 'Linkedin',
-    icon: 'src/assets/icons/linkedin.svg',
+    icon: `${imgPath}/icons/linkedin.svg`,
     link: 'https://www.linkedin.com/in/bruno-yu-357415253',
   },
     {
     name: 'CakeResume',
-    icon: 'src/assets/icons/file-user.svg',
+    icon: `${imgPath}/icons/file-user.svg`,
     link: 'https://www.cakeresume.com/s--3QltBjc_WfUv2lo-j1NZmg--/jackhellowin',
   },
 ]
@@ -69,8 +72,8 @@ export const selfContent: selfcontent = {
   name: 'Bruno\u0020YU',
   career: 'Front-end\u0020Developer',
   avatar: {
-    pc: 'src/assets/images/avatar.webp',
-    mobile: 'src/assets/images/avatar.webp',
+    pc: `${imgPath}/images/avatar.webp`,
+    mobile: `${imgPath}/images/avatar.webp`,
   }
 }
 
@@ -118,7 +121,7 @@ export const experience: aboutItem[] = [
 
 export const works:workItem[] = [
   {
-    cover_img: 'src/assets/images/work01.webp',
+    cover_img: `${imgPath}/images/work01.webp`,
     title: 'NFT GEL',
     description: '販售 NFT 網站的仿做，嘗試刻劃的練習作品',
     skills: 'ejs,gulp,Bootstrap5',
@@ -126,7 +129,7 @@ export const works:workItem[] = [
     page_url: 'https://bruno-yu.github.io/NFT_GEL/',
   },
   {
-    cover_img: 'src/assets/images/work02.webp',
+    cover_img: `${imgPath}/images/work02.webp`,
     title: 'GrandMaSam\nDiner',
     description: '山姆大嬸餐館，獨樹一格的菜餚與經營方式，一定讓體驗過的您難以忘懷',
     skills: 'Vue3,Vue_cli,Bootstrap5',
@@ -134,7 +137,7 @@ export const works:workItem[] = [
     page_url: 'https://bruno-yu.github.io/GrandMaSam_Diner/#/',
   },
   {
-    cover_img: 'src/assets/images/THEF2E.webp',
+    cover_img: `${imgPath}/images/THEF2E.webp`,
     title: 'THE F2E\n2022',
     description: 'THE F2E 2022 黑客松',
     skills: 'ejs, gulp ,Tailwind, GSAP, AOS, Lottie',
@@ -142,7 +145,7 @@ export const works:workItem[] = [
     page_url: 'https://bruno-yu.github.io/TheF2E_2022_week1/',
   },
   {
-    cover_img: 'src/assets/images/點點簽.webp',
+    cover_img: `${imgPath}/images/點點簽.webp`,
     title: 'THE F2E\n2022',
     description: 'THE F2E 2022 點點簽',
     skills: 'Vue 3, Vue CLI, Pinia, Tailwind CSS, Tailwind Elements, pdf.js, fabric.js, jspdf.js',
@@ -150,7 +153,7 @@ export const works:workItem[] = [
     page_url: 'https://bruno-yu.github.io/TheF2E_2022_DotSign/#/',
   },
   {
-    cover_img: 'src/assets/images/work03.webp',
+    cover_img: `${imgPath}/images/work03.webp`,
     title: 'Coding\nHome',
     description: '程式家教，切版練習',
     skills: 'ejs, gulp ,Bootstrap5',
@@ -158,7 +161,7 @@ export const works:workItem[] = [
     page_url: 'https://bruno-yu.github.io/Coding_Home/',
   },
   {
-    cover_img: 'src/assets/images/work04.webp',
+    cover_img: `${imgPath}/images/work04.webp`,
     title: 'Todo List',
     description: '待辦清單，練習 Create React App 使用以及 RESTful API 串接',
     skills: '串接 Swagger API, React Hook Form, useContext',

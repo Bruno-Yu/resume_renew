@@ -7,7 +7,7 @@
         <div class="hidden lg:block relative">
           <div class="absolute bottom-0 w-3/4 bg-black h-1/2 z-[-1]"></div>
           <div class="border-3 border-black p-2 w-3/4 xl:w-1/2 mx-auto">
-            <img class="w-full h-auto" src="../assets/images/contact_me.webp" alt="contact_me">
+            <img class="w-full h-auto" :src="`${imgPath}/images/contact_me.webp`" alt="contact_me">
           </div>
         </div>
         <div>
@@ -44,6 +44,7 @@
 
 <script lang="ts" setup>
 import { defineProps } from 'vue'
+import { imgPath } from "../../information"
 
 const { titleInfo } = defineProps(['titleInfo'])
 const { title, id } = titleInfo
