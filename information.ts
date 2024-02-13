@@ -1,7 +1,7 @@
 import type {menuItem, socialItem,  selfcontent, aboutItem, workItem} from "./types/information";
 
-// dev 模式 'public' pro 或 上傳 ''
-export const imgPath = 'https://github.com/Bruno-Yu/resume_renew/blob/main/public/'
+// dev 模式 'public' pro 或 上傳 'https://github.com/Bruno-Yu/resume_renew/blob/main/public'
+export const imgPath = 'https://raw.githubusercontent.com/Bruno-Yu/resume_renew/main/public/'
 
 // common
 export const socialMedia:socialItem[] = [
