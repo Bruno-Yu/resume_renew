@@ -37,7 +37,7 @@ export type  description = {
   }
 
 // selfContent avatar
-export type  avatar = {
+export type avatar = {
     pc:string
     mobile: string
   }
@@ -51,7 +51,7 @@ export interface selfcontent {
   avatar: avatar
 }
 
-export type dataType = menuItem | socialItem | aboutItem | workItem | description | avatar | selfContent
+export type dataType = menuItem | socialItem | aboutItem | workItem | description | avatar | selfcontent
 
 // common
 export const socialMedia:socialItem[] = [
