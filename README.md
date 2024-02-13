@@ -9,7 +9,7 @@ Hello, I'm Bruno Yu, an frontend developer!I firmly believe that continuous self
 
 * [Linkedin bruno-yu](https://www.linkedin.com/in/bruno-yu-357415253 "bruno-yu")
 * [email jackhellowin@gmail.com](https://bruno-yu.github.io/resume/#)
-* [個人網站](https://bruno-yu.github.io/resume/)
+* [個人網站](https://bruno-yu.github.io/resume_renew/)
 
 希望您喜歡我的作品，若有興趣與我合作或有任何建議，都歡迎與我聯繫!
 
