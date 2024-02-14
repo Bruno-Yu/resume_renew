@@ -16,10 +16,12 @@ Hello, I'm Bruno Yu, an frontend developer!I firmly believe that continuous self
 ## 使用技術
 
 1. Astro
-2. Flobies
-3. Typescript
-4. Tailwind
-5. swiper
+2. Vue
+3. Flowbie
+4. Typescript
+5. Tailwind
+6. swiper
+7. vee-validat
 
 ## 安裝指令
 
