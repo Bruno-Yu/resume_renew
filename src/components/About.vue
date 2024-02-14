@@ -9,7 +9,7 @@
         <div class="w-fulL p-5">
           <h3 class="mb-3  text-3xl font-extrabold text-yellow-400">關於我 <span class="ml-2 text-xl font-bold text-gray-400">About me</span></h3>  
           <p>
-            {{ description.about }}
+            {{ isEng ? description.en_about : description.about }}
           </p> 
           <ul class="mt-3 flex gap-3">
             <li v-for="media in socialMedia" :key="media.name">
@@ -24,9 +24,9 @@
           <h3 class="mb-3 text-3xl font-extrabold text-yellow-400">技能 <span class="ml-2 text-lg font-bold text-gray-400">Skills</span></h3>
           <ul class="grid grid-cols-2 xl:grid-cols-3 gap-6">
             <li v-for="skill in convertedSkills" :key="skill.name" class="border-b border-gray-300 pb-5 h-full">
-              <h4 class="text-xl font-extrabold mb-2 text-secondary">{{ skill.name }}</h4>
+              <h4 class="text-xl font-extrabold mb-2 text-secondary">{{ isEng ? skill.en_name : skill.name }}</h4>
               <ul class="list-disc text-sm pl-5 flex flex-col gap-1">
-                <li v-for="detail in skill.details" :key="detail">{{ detail }}</li>
+                <li v-for="detail in (isEng ? skill.en_details : skill.details)" :key="detail">{{ detail }}</li>
               </ul>
             </li>
           </ul>
@@ -35,9 +35,9 @@
           <h3 class="mb-3 text-3xl font-extrabold text-yellow-400">經歷 <span class="ml-2 text-lg font-bold text-gray-400">Work experience</span></h3>
           <ul class="grid grid-cols-1 gap-6">
             <li v-for="work in convertedExperience" :key="work.name" class="border-b border-gray-300 pb-5 h-full">
-              <h4 class="text-xl font-extrabold mb-2 text-secondary">{{ work.name }}</h4>
+              <h4 class="text-xl font-extrabold mb-2 text-secondary">{{ isEng ? work.en_name : work.name }}</h4>
               <ul class="list-disc text-sm pl-5 flex flex-col gap-1">
-                <li v-for="detail in work.details" :key="detail">{{ detail }}</li>
+                <li v-for="detail in (isEng ? work.en_details : work.details)" :key="detail">{{ detail }}</li>
               </ul>
             </li>
           </ul>
@@ -63,7 +63,7 @@ const convertedSkills: aboutItem[] = dataConverter(skills)
 const convertedExperience: aboutItem[] = dataConverter(experience)
 
 const { description } = convertedSelf
-const { titleInfo } = defineProps(['titleInfo'])
+const { titleInfo, isEng } = defineProps(['titleInfo', 'isEng'])
 const { title, id } = titleInfo
 
 

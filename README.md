@@ -21,7 +21,7 @@ Hello, I'm Bruno Yu, an frontend developer!I firmly believe that continuous self
 4. Typescript
 5. Tailwind
 6. swiper
-7. vee-validat
+7. vee-validate
 
 ## 安裝指令
 

@@ -14,7 +14,7 @@
             <h2 class=" text-center lg:text-start font-bold text-5xl">{{ selfContent.cnName }}<span class="hidden lg:block text-3xl font-bold ">{{ selfContent.enName }}</span></h2>
             <div class="grid grid-cols-2">
               <div class="col col-span-2 xl:col-span-1">
-                  <p class="mt-1 lg:mt-0  text-center lg:text-start text-xl mb-1 text-nowrap">{{ selfContent.description.name }}<span class="block lg:inline ">{{ selfContent.description.content }}</span></p>
+                  <p class="mt-1 lg:mt-0  text-center lg:text-start text-xl mb-1 text-nowrap">{{ isEng ? selfContent.description.en_name : selfContent.description.name }}<span class="block lg:inline ">{{ isEng ? selfContent.description.en_content : selfContent.description.content }}</span></p>
               </div>
               <!-- social media -->
               <div class="col hidden xl:block">
@@ -53,6 +53,8 @@ export default {
 </script>
 
 <script lang="ts" setup>
+import { defineProps } from 'vue'
 import { selfContent, socialMedia, imgPath } from "../../information"
+defineProps(['isEng'])
 
 </script>

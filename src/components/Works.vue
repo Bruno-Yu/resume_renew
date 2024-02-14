@@ -37,8 +37,8 @@
             <h3 class="text-white text-5xl font-bold mb-8 mt-auto pl-6 group-hover:text-primary">{{ item.title }}</h3> 
             <div class="flex justify-between gap-1 p-2 items-end lg:p-6">
               <div class="hidden xl:block w-50 p-6 bg-white/80">
-                  <p>{{ item.description }}</p>
-                  <p class="text-sm"> 技術: {{ item.skills }}</p>
+                  <p>{{ isEng ? item.en_description : item.description }}</p>
+                  <p class="text-sm"> {{ `${(isEng ? 'Skills:' : '技術:')} ${item.skills}` }}</p>
               </div>
               <div class="w-50 flex justify-end">
                 <a
@@ -80,12 +80,13 @@ export default {
     SwiperSlide,
   },
   props: [
-    'titleInfo'
+    'titleInfo', 'isEng'
   ],
   setup(props: any) {
-    const { titleInfo } = props
+    const { titleInfo, isEng } = props
     const { title, id } = titleInfo
     return {
+      isEng,
       modules: [EffectCoverflow, Pagination],
       works,
       title,

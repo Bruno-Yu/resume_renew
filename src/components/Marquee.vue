@@ -9,10 +9,9 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 import { stringConverter } from '../utils/index'
-
-const { marqueeContent } = defineProps(['marqueeContent'])
-let { hidden, content } = marqueeContent
-const textContent = stringConverter(content)
+const { marqueeContent, isEng } = defineProps(['marqueeContent', 'isEng'])
+let { hidden, content, en_content } = marqueeContent
+const textContent = stringConverter(isEng ? en_content : content)
 
 </script>
 

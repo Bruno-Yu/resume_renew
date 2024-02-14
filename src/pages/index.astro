@@ -34,14 +34,14 @@ import { menuContent, marqueeContent } from "../../information";
       </li>
     </ul>
     <div class="bg-white h-16"></div>
-    <Navbar client:only menuContent={menuContent} />
-    <Banner />
-    <Marquee marqueeContent={marqueeContent} />
-    <About client:only titleInfo={menuContent[1]} />
-    <Marquee marqueeContent={marqueeContent} />
-    <Works client:only titleInfo={menuContent[2]} />
-    <Contact client:only titleInfo={menuContent[3]} />
-    <Marquee marqueeContent={marqueeContent} />
+    <Navbar client:only menuContent={menuContent} isEng={false} />
+    <Banner isEng={false} />
+    <Marquee marqueeContent={marqueeContent} isEng={false} />
+    <About client:only titleInfo={menuContent[1]} isEng={false} />
+    <Marquee marqueeContent={marqueeContent} isEng={false} />
+    <Works client:only titleInfo={menuContent[2]} isEng={false} />
+    <Contact client:only titleInfo={menuContent[3]} isEng={false} />
+    <Marquee marqueeContent={marqueeContent} isEng={false} />
     <Footer />
   </main>
 </Layout>

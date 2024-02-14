@@ -13,7 +13,7 @@
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li v-for="(item, index) in menuContent" :key="index" :class="{ 'hidden': item.hidden }">
-          <a  type="button" :href="item.link" class="block py-2 px-3 text-black hover:text-primary rounded md:bg-transparent md:p-0 " aria-current="page" >{{ item.menuTab }}</a>
+          <a  type="button" :href="item.link" class="block py-2 px-3 text-black hover:text-primary rounded md:bg-transparent md:p-0 " aria-current="page" >{{ isEng ? item.en_menuTab : item.menuTab }}</a>
         </li>
       </ul>
     </div>
@@ -30,5 +30,5 @@ export default {
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 import { imgPath } from "../../information"
-defineProps(['menuContent'])
+defineProps(['menuContent', 'isEng'])
 </script>
