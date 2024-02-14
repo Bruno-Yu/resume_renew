@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Create .env file from secrets
         run: |
-          echo PUBLIC_IMGURL="https://raw.githubusercontent.com/Bruno-Yu/resume_renew/main/public" >> .env
+          echo "PUBLIC_IMGURL=${{ secrets.PUBLIC_IMGURL }}" >> .env.production
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         # with:
