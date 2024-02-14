@@ -12,29 +12,33 @@
         </div>
         <div>
           <div class="w-full lg:w-3/4 p-5">
-              <form action="https://formsubmit.co/89a36b0827909cfaa7405e0c39747ab3" method="POST">
+              <VForm action="https://VFormsubmit.co/89a36b0827909cfaa7405e0c39747ab3" v-slot="{ meta }" method="POST">
                 <div class="grid mb-5 grid-cols-2 gap-4">
                   <div>
-                    <label for="Name" class="block mb-2 text-sm font-bold">稱呼 / Name</label>
-                    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" name="name" id="Name" placeholder="請輸入您的稱謂" required />
+                    <label for="Name" class="after:content-['*'] after:ml-0.5 after:text-red-500 block mb-2 text-sm font-bold">稱呼 / Name</label>
+                    <VField type="text"  rules="required" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-400 focus:border-amber-400 block w-full p-2.5" name="稱呼" id="Name" placeholder="請輸入您的稱謂" required />
+                    <ErrorMessage class="text-xs text-red-500" name="稱呼"/>
                   </div>
                   <div>
-                    <label for="Email" class="block mb-2 text-sm font-bold">信箱 / Email</label>
-                    <input type="email"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"  name="email" id="Email" placeholder="xxx@abcmail.com" required />
+                    <label for="Email" class="after:content-['*'] after:ml-0.5 after:text-red-500 block mb-2 text-sm font-bold">信箱 / Email</label>
+                    <VField type="email"  rules="required|email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-400 focus:border-amber-400 block w-full p-2.5"  name="信箱" id="Email" placeholder="xxx@abcmail.com" required />
+                    <ErrorMessage class="text-xs text-red-500" name="信箱"/>
                   </div>
                 </div>
                 <div class="mb-5">
-                  <label for="Subject" class="block mb-2 text-sm font-bold">主題 / Subject</label>
-                  <input type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"  name="subject"  id="Subject" placeholder="關於" required />
+                  <label for="Subject" class="after:content-['*'] after:ml-0.5 after:text-red-500 block mb-2 text-sm font-bold">主題 / Subject</label>
+                  <VField type="text" rules="required|min:2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-400 focus:border-amber-400 block w-full p-2.5"  name="主題"  id="Subject" placeholder="關於" required />
+                  <ErrorMessage class="text-xs text-red-500" name="主題"/>
                 </div>
                 <div class="mb-5">
-                  <label for="Message" class="block mb-2 text-sm font-bold">訊息 / Message</label>
-                  <textarea type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"  name="message" id="Message" rows="5" placeholder="請輸入您的訊息" required />
+                  <label for="Message" class="after:content-['*'] after:ml-0.5 after:text-red-500 block mb-2 text-sm font-bold">訊息 / Message</label>
+                  <VField as="textarea" type="text" rules="required|min:6" class="bg-gray-50 border border-gray-300 min-h-18 text-gray-900 text-sm rounded-lg focus:ring-amber-400 focus:border-amber-400 block w-full p-2.5"  name="訊息" id="Message" placeholder="請輸入您的訊息" required />
+                  <ErrorMessage class="text-xs text-red-500" name="訊息"/>
                 </div>
                 <div class="flex justify-center xl:justify-start mt-9">
-                  <button type="submit" class="text-black bg-primary w-full xl:w-2/5 hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold rounded text-sm px-5 py-2.5 text-center shadow">寄出</button>
+                  <button type="submit" :disabled="!meta.valid" class="text-black bg-primary disabled:text-black/70 disabled:bg-primary/70 w-full xl:w-2/5 hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold rounded text-sm px-5 py-2.5 text-center shadow">寄出</button>
                 </div>
-              </form>
+              </VForm>
           </div>
         </div>
       </div>
@@ -45,6 +49,23 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 import { imgPath } from "../../information"
+import type { randomObjectType } from "../../types/utils";
+// vee-validate
+import {
+  Field as VField, Form as VForm, ErrorMessage, defineRule, configure,
+} from 'vee-validate';
+import * as AllRules from '@vee-validate/rules';
+import { localize, setLocale } from '@vee-validate/i18n';
+import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
+// 將所有的 驗證規則引入
+Object.keys(AllRules as randomObjectType).forEach((rule: string): void => {
+  defineRule(rule, (AllRules as randomObjectType)[rule]);
+});
+configure({
+  generateMessage: localize({ zh_TW: zhTW }),
+  validateOnInput: true,
+});
+setLocale('zh_TW');
 
 const { titleInfo } = defineProps(['titleInfo'])
 const { title, id } = titleInfo

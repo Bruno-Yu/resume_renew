@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col justify-center h-[60vh]">
+  <section class="flex flex-col justify-center lg:h-[60vh]">
     <div class="grid grid-cols-12 h-full border-gray-500 border-y-4">
       <div class="col-span-full lg:col-span-8 bg-primary lg:relative">
         <!-- deco svg -->
@@ -10,15 +10,16 @@
         <!-- 手機板頭像 -->
         <img class="block lg:hidden rounded-full bg-white border border-3 border-black mx-auto my-2 object-cover bg-center  w-40 h-40" :src="selfContent.avatar.mobile" alt="avatar" />
         <div class="grid grid-cols-12 lg:absolute w-full lg:w-4/5 left-[10%] bottom-1 items-end">
-          <div class="col-span-12 lg:col-span-10 pl-5 lg:pl-0">
+          <div class="col-span-12 lg:col-span-10 lg:pl-0">
             <h2 class=" text-center lg:text-start font-bold text-5xl">{{ selfContent.cnName }}<span class="hidden lg:block text-3xl font-bold ">{{ selfContent.enName }}</span></h2>
             <div class="grid grid-cols-2">
               <div class="col col-span-2 xl:col-span-1">
-                  <p class="mt-1 lg:mt-0 pl-10 lg:pl-0 text-center lg:text-start text-xl mb-1 text-nowrap">{{ selfContent.description.name }}<span class="block lg:inline ">{{ selfContent.description.content }}</span></p>
+                  <p class="mt-1 lg:mt-0  text-center lg:text-start text-xl mb-1 text-nowrap">{{ selfContent.description.name }}<span class="block lg:inline ">{{ selfContent.description.content }}</span></p>
               </div>
+              <!-- social media -->
               <div class="col hidden xl:block">
                   <ul class="flex gap-3 items-center">
-                      <li v-for="media in socialMedia" :key="media.name"><a :href="media.link" class="block" target="_blank"><img class="w-4 h-4 inline" :src="media.icon" :alt="media.name"/> </a></li>
+                      <li v-for="media in socialMedia" :key="media.name"><a :href="media.link" class="block float_icons" target="_blank"><img class="w-4 h-4 inline" :src="media.icon" :alt="media.name"/> </a></li>
                   </ul>
               </div>
             </div>

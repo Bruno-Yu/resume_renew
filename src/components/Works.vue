@@ -2,9 +2,15 @@
   <section :id="id">
     <h2 class="title mt-14 mb-6  text-center" >{{ title }}</h2>
     <div class="max-w-screen-2xl mx-auto p-4">
-      <swiper  
+      <swiper 
+      :style="{
+        '--swiper-pagination-color': 'rgb(255, 203, 66)',
+        '--swiper-pagination-bullet-inactive-color': '#FFFF',
+        '--swiper-pagination-bullet-inactive-opacity': '0.6',
+      }" 
       :effect="'coverflow'" 
       :grabCursor="true"
+      :pagination="true"
       :centeredSlides="true"
       :initialSlide="1"
       :coverflowEffect="{
@@ -48,7 +54,6 @@
           </div>
         </div> 
       </swiper-slide>
-      <swiper-pagination />
       </swiper>
     </div> 
   </section>

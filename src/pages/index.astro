@@ -6,7 +6,8 @@ import Banner from "../components/Banner.vue";
 import About from "../components/About.vue";
 import Works from "../components/Works.vue";
 import Contact from "../components/Contact.vue";
-import { menuContent } from "../../information";
+import Marquee from "../components/Marquee.vue";
+import { menuContent, marqueeContent } from "../../information";
 ---
 
 <Layout title="Bruno Yu">
@@ -16,7 +17,7 @@ import { menuContent } from "../../information";
       <li>
         <a href={menuContent[0].link} class="float_icons group block"
           ><span
-            class="material-symbols-outlined text-5xl text-secondary group-hover:text-primary"
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400"
           >
             arrow_circle_up
           </span></a
@@ -25,7 +26,7 @@ import { menuContent } from "../../information";
       <li>
         <a href={menuContent[3].link} class="float_icons group block"
           ><span
-            class="material-symbols-outlined text-5xl text-secondary group-hover:text-primary"
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400"
           >
             mail</span
           ></a
@@ -35,9 +36,12 @@ import { menuContent } from "../../information";
     <div class="bg-white h-16"></div>
     <Navbar client:only menuContent={menuContent} />
     <Banner />
+    <Marquee marqueeContent={marqueeContent} />
     <About client:only titleInfo={menuContent[1]} />
+    <Marquee marqueeContent={marqueeContent} />
     <Works client:only titleInfo={menuContent[2]} />
     <Contact client:only titleInfo={menuContent[3]} />
+    <Marquee marqueeContent={marqueeContent} />
     <Footer />
   </main>
 </Layout>

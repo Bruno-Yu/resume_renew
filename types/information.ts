@@ -1,3 +1,8 @@
+export type marquee = {
+  hidden: boolean
+  content: string
+}
+
 export type  menuItem = {
   menuTab: string
   title: string

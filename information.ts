@@ -1,7 +1,14 @@
-import type {menuItem, socialItem,  selfcontent, aboutItem, workItem} from "./types/information";
+import type {menuItem, socialItem,  selfcontent, aboutItem, workItem, marquee} from "./types/information";
 
 // dev 模式 'public' pro 或 上傳 'https://github.com/Bruno-Yu/resume_renew/blob/main/public'
-export const imgPath = 'https://raw.githubusercontent.com/Bruno-Yu/resume_renew/main/public'
+export const imgPath = import.meta.env.PUBLIC_IMGURL 
+
+// 跑馬燈
+export const marqueeContent:marquee = {
+  hidden: false, // 開啟/關閉
+  content: '(´▽`)ﾉ 感謝您閱讀 (´▽`) (´▽`)ﾉ 歡迎聯繫 (´▽`) (´･ω･`) 若有興趣，歡迎聯繫 (◐‿◑) (´▽`)ﾉ'
+}
+
 
 // common
 export const socialMedia:socialItem[] = [
