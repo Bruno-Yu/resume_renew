@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col justify-center lg:h-[60vh]">
+  <section class="flex flex-col justify-center h-[500px]">
     <div class="grid grid-cols-12 h-full border-gray-500 border-y-4">
       <div class="col-span-full lg:col-span-8 bg-primary lg:relative">
         <!-- deco svg -->
