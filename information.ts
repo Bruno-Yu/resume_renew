@@ -75,11 +75,11 @@ export const menuContent:  menuItem[] = [
 export const multiLanguage:menuItem[] = [
   {
     menuTab: 'English (US)',
-    link: '/en#',
+    link: '/resume_renew/en#',
   },
   {
     menuTab: '中文 (繁體)',
-    link: '/#',
+    link: '/resume_renew/#',
   }
 ]
 
