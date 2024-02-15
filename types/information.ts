@@ -6,11 +6,11 @@ export type marquee = {
 
 export type  menuItem = {
   menuTab: string
-  en_menuTab: string
-  title: string
-  id: string
+  en_menuTab?: string
+  title?: string
+  id?: string
   link: string
-  hidden: boolean
+  hidden?: boolean
 }
 
 export type socialItem = {

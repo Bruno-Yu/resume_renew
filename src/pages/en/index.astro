@@ -8,6 +8,7 @@ import Works from "../../components/Works.vue";
 import Contact from "../../components/Contact.vue";
 import Marquee from "../../components/Marquee.vue";
 import { menuContent, marqueeContent } from "../../../information";
+const isEng = true;
 ---
 
 <Layout title="Bruno Yu">
@@ -34,14 +35,14 @@ import { menuContent, marqueeContent } from "../../../information";
       </li>
     </ul>
     <div class="bg-white h-[5rem] lg:h-16"></div>
-    <Navbar client:only menuContent={menuContent} isEng={true} />
-    <Banner isEng={true} />
-    <Marquee marqueeContent={marqueeContent} isEng={true} />
-    <About client:only titleInfo={menuContent[1]} isEng={true} />
-    <Marquee marqueeContent={marqueeContent} isEng={true} />
-    <Works client:only titleInfo={menuContent[2]} isEng={true} />
-    <Contact client:only titleInfo={menuContent[3]} isEng={true} />
-    <Marquee marqueeContent={marqueeContent} isEng={true} />
+    <Navbar client:only menuContent={menuContent} isEng={isEng} />
+    <Banner isEng={isEng} />
+    <Marquee marqueeContent={marqueeContent} isEng={isEng} />
+    <About client:only titleInfo={menuContent[1]} isEng={isEng} />
+    <Marquee marqueeContent={marqueeContent} isEng={isEng} />
+    <Works client:only titleInfo={menuContent[2]} isEng={isEng} />
+    <Contact client:only titleInfo={menuContent[3]} isEng={isEng} />
+    <Marquee marqueeContent={marqueeContent} isEng={isEng} />
     <Footer />
   </main>
 </Layout>

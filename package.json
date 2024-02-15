@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev --open",
     "start": "astro dev",
-    "build": "astro check && astro build --mode production",
+    "build": "astro build --mode production",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -71,6 +71,18 @@ export const menuContent:  menuItem[] = [
   }
 ]
 
+// i18n
+export const multiLanguage:menuItem[] = [
+  {
+    menuTab: 'English (US)',
+    link: 'en#',
+  },
+  {
+    menuTab: '中文 (繁體)',
+    link: '#',
+  }
+]
+
 // banner & about's description
 export const selfContent: selfcontent = {
   cnName: '余俊毅',
