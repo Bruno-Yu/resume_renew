@@ -12,13 +12,13 @@ const isEng = true;
 ---
 
 <Layout title="Bruno Yu">
-  <main>
+  <main class="dark:bg-dark-bg">
     <!-- 右下角功能導覽 -->
     <ul class="fixed z-10 right-0 2xl:right-5 bottom-5 w-[50px] h-[100px]">
       <li>
         <a href={menuContent[0].link} class="float_icons group block"
           ><span
-            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400"
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400 dark:text-dark-purple dark:group-hover:text-dark-primary"
           >
             arrow_circle_up
           </span></a
@@ -27,14 +27,14 @@ const isEng = true;
       <li>
         <a href={menuContent[3].link} class="float_icons group block"
           ><span
-            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400"
+            class="material-symbols-outlined text-5xl text-secondary group-hover:text-amber-400 dark:text-dark-purple dark:group-hover:text-dark-primary"
           >
             mail</span
           ></a
         >
       </li>
     </ul>
-    <div class="bg-white h-[5rem] lg:h-16"></div>
+    <div class="bg-white dark:bg-dark-bg h-[5rem] lg:h-16"></div>
     <Navbar client:only menuContent={menuContent} isEng={isEng} />
     <Banner isEng={isEng} />
     <Marquee marqueeContent={marqueeContent} isEng={isEng} />

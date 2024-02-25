@@ -1,6 +1,6 @@
 <template>
   <div class="marquee-container" :style="{ 'display': hidden ? 'none' : 'flex' }">
-    <div v-for="item in 10" :key="item" class="marquee-content text-white bg-black/90 py-2">
+    <div v-for="item in 10" :key="item" class="marquee-content text-white bg-black/90 dark:text-dark-primary py-2">
     {{ textContent }}
     </div>
   </div>
