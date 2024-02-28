@@ -15,7 +15,7 @@
             <li v-for="media in socialMedia" :key="media.name">
               <a :href="media.link" class="block group" target="_blank">
                 <img class="w-4 h-4 inline" :src="media.icon" :alt="media.name"/> 
-                <span class="ml-1 font-bold text-xs text-secondary group-hover:text-primary dark:text-gray-400 dark:group-hover:text-dark-primary">{{ media.name }}</span>
+                <span class="ml-1 hidden sm:inline font-bold text-xs text-secondary group-hover:text-primary dark:text-gray-400 dark:group-hover:text-dark-primary">{{ media.name }}</span>
               </a>
             </li>
           </ul>
