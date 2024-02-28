@@ -12,7 +12,7 @@
         </div>
         <div>
           <div class="w-full lg:w-3/4 p-5">
-              <VForm action="https://VFormsubmit.co/89a36b0827909cfaa7405e0c39747ab3" v-slot="{ meta }" method="POST">
+              <VForm action="https://formsubmit.co/jackhellowin@gmail.com" v-slot="{ meta }" method="POST">
                 <div class="grid mb-5 grid-cols-2 gap-4">
                   <div>
                     <label for="Name" class="after:content-['*'] after:ml-0.5 after:text-red-500 block mb-2 text-sm font-bold dark:text-dark-white">稱呼 / Name</label>
