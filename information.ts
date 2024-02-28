@@ -28,7 +28,12 @@ export const socialMedia:socialItem[] = [
     icon: `${imgPath}/icons/linkedin.svg`,
     link: 'https://www.linkedin.com/in/bruno-yu-357415253',
   },
-    {
+  {
+    name: 'Blog',
+    icon: `${imgPath}/icons/site-alt.svg`,
+    link: 'https://bruno-yu.github.io/bruno_blog/'
+  },
+  {
     name: 'CakeResume',
     icon: `${imgPath}/icons/file-user.svg`,
     link: 'https://www.cakeresume.com/s--3QltBjc_WfUv2lo-j1NZmg--/jackhellowin',
