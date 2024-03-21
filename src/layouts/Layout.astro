@@ -11,18 +11,22 @@ const { title } = Astro.props;
 <html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="Description" content=" Bruno Yu 余俊毅 前端開發人員 履歷" />
-    <meta property="og:title" content="Bruno 作品" />
+    <meta name="description" content=" Bruno Yu 余俊毅 前端開發人員簡介" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Bruno resume" />
+    <meta property="twitter:title" content="Bruno Yu 余俊毅 前端開發人員簡介" />
+    <meta property="twitter:description" content="致力於前端開發，並將多元背景帶入技術創新的領域的前端開發者，希望藉由個人的多元背景和熱情將為團隊帶來新的視角和創意為團隊帶來價值 " />
+    <meta property="og:title" content="Bruno Yu 余俊毅 前端開發人員簡介" />
     <meta
       property="og:description"
-      content="Bruno Yu 余俊毅 前端開發人員 履歷 "
+      content="致力於前端開發，並將多元背景帶入技術創新的領域的前端開發者，希望藉由個人的多元背景和熱情將為團隊帶來新的視角和創意為團隊帶來價值 "
     />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="./assets/images/stamp.png" />
+    <meta property="og:url" content="https://bruno-yu.github.io/resume_renew/" />
+    <meta property="og:image" content="https://i.imgur.com/vnDwIt1.png" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Bruno Yu 余俊毅前端開發人員履歷" />
@@ -41,6 +45,7 @@ const { title } = Astro.props;
       }
   </script>
     <title>{title}</title>
+    <meta name="google-site-verification" content="fMBpCp-UTfNM3pRxoDJGq4AvrD2carfnveNISYvGoSk" />
   </head>
   <body>
     <slot />
