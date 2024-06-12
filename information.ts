@@ -165,12 +165,12 @@ export const skills: aboutItem[] = [
     'Basic research on front-end frameworks Svelte and Astro'
     ]
   },
-  {
-    name: '語言能力(英文)',
-    en_name: 'Language proficiency certificate (English)',
-    details: ['TOEIC\u0020listening\u0020and\u0020reading\u0020940/990','TOEIC speaking 140/200', 'TOEIC writing 150/200'],
-    en_details: ['TOEIC\u0020listening\u0020and\u0020reading\u0020940/990','TOEIC speaking 140/200', 'TOEIC writing 150/200']
-  },
+  // {
+  //   name: '語言能力(英文)',
+  //   en_name: 'Language proficiency certificate (English)',
+  //   details: ['TOEIC\u0020listening\u0020and\u0020reading\u0020940/990','TOEIC speaking 140/200', 'TOEIC writing 150/200'],
+  //   en_details: ['TOEIC\u0020listening\u0020and\u0020reading\u0020940/990','TOEIC speaking 140/200', 'TOEIC writing 150/200']
+  // },
 ]
 
 // experience
