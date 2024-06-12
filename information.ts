@@ -97,8 +97,8 @@ export const selfContent: selfcontent = {
     en_name: 'I’m Bruno,\u0020',
     content: '是名前端開發者' ,
     en_content: 'An Frontend Developer',
-    about: '您好，我是余俊毅，一位前端開發人員！我深信在這變幻莫測的世界中，持續精進自己是不可或缺的軟實力。從對程式的好奇開始，經歷了業界的訓練，這段歷程不僅在興趣中磨練了基本技能，更培養了對新技術持續探索的熱忱和卓越的自學能力。當遇到陌生的領域，我會主動查找相關資源進行補充學習（如 MDN、W3C、Stack Overflow），在解決問題的過程中深刻體會到新技術的誕生常源自對當前問題的深刻理解。我深信「科技始於人性」，並渴望加入一個共同成長的團隊，攜手打造卓越的數位產品。',
-    en_about: 'Hello, I’m Bruno Yu, an frontend developer! I firmly believe that continuous self-improvement is an indispensable soft skill in this ever-changing world. Starting from a curiosity about programming, I went through intensive training at work. This journey not only honed my fundamental skills within my interests but also cultivated a passion for continuous exploration of new technologies and exceptional self-learning abilities. When faced with unfamiliar domains, I proactively seek relevant resources for supplementary learning (such as MDN, W3C, Stack Overflow). Throughout problem-solving, I’ve come to understand that the birth of new technologies often stems from a profound understanding of current challenges. I deeply resonate with the phrase ‘Technology begins with humanity’ and aspire to join a team committed to mutual growth, collaborating to create top-notch digital products.'
+    about: '您好，我是余俊毅，一位前端開發人員！有近兩年的前端開發經驗，擁有前端開發和傳產專案管理等跨領域經驗背景。具備團隊溝通能力，樂於分享知識與解決問題，有自學能力且喜歡使用新工具。 ',
+    en_about: 'Hello, I’m Bruno Yu, an frontend developer! With nearly two years of experience in front-end development, I have a cross-disciplinary background in front-end development and industrial project management. Possessing team communication skills, willing to share knowledge and solve problems, self-learning ability, and enjoy using new tools. '
   },
   name: 'Bruno\u0020YU',
   career: 'Front-end\u0020Developer',
@@ -113,51 +113,56 @@ export const skills: aboutItem[] = [
   {
     name: 'Vue',
     en_name: 'Vue',
-    details: ['會使用 Vue Cli, Vite, Nuxt 3','使用 Composition API 以及 Option API 開發專案 ', '使用 Vue Axios 串接 API 資料 ', '曾使用 Nuxt2 團隊合作開發大型專案', '使用狀態管理工具管理全域狀態 ex: vuex, pinia '],
-    en_details: ['Proficient in Vue CLI, Vite, and Nuxt 3', 'Develop projects using both Composition API and Option API', 'Utilize Vue Axios for API data integration', 'Previously collaborated on a large-scale project using Nuxt 2', 'Proficient in global state management tools such as Vuex and Pinia' ]
+    details: ['使用 Nuxt 2, Nuxt 3, Vite 開發專案','使用 Vue3 Composition API  開發專案 ', '了解 RESTful API 並會使用 AJAX 與其串接 ', '使用 Pinia, Vuex 狀態管理工具管理全域狀態', '了解 ES6 並使用 Typescript 來開發專案'],
+    en_details: ['Develop projects using Nuxt 2, Nuxt 3, Vite ', 'Develop projects using Vue3 Composition API ', 'Understand RESTful API and use AJAX to integrate with it ', 'Manage global state using Pinia, Vuex state management tool ', 'Understand ES6 and use TypeScript to develop projects' ]
   },
-  {
-    name: 'JavaScript / TypeScript',
-    en_name: 'JavaScript / TypeScript',
-    details: ['使用 GSAP, jQuery 實作網頁互動效果 ', '透過 AJAX / JSON 串接 RESTful API ', '使用 ESLint 管理程式碼品質 ', '了解 ES6 語言特性' ,'與團隊合作，使用 Typescript 開發大型專案 '],
-    en_details: [
-    'Implement web interaction effects using GSAP and jQuery',
-    'Integrate with RESTful API via AJAX / JSON',
-    'Manage code quality using ESLint',
-    'Understand ES6 language features',
-    'Collaborate with the team to develop large-scale projects using Typescript'
-    ]
-  },
-  {
-    name: 'React',
-    en_name: 'React',
-    details: ['使用 Create React App 完成新專案建立 ', '使用 React Hook ', '使用 Context 以及 props 進行元件間的溝通', '以此完成 todo list 等小工具'],
-    en_details: [    'Complete new project setup using Create React App',
-    'Utilize React Hooks',
-    'Communicate between components using Context and props',
-    'Implemented features such as todo lists and other small tools']
-  },
+  // {
+  //   name: 'JavaScript / TypeScript',
+  //   en_name: 'JavaScript / TypeScript',
+  //   details: ['使用 GSAP, jQuery 實作網頁互動效果 ', '透過 AJAX / JSON 串接 RESTful API ', '使用 ESLint 管理程式碼品質 ', '了解 ES6 語言特性' ,'與團隊合作，使用 Typescript 開發大型專案 '],
+  //   en_details: [
+  //   'Implement web interaction effects using GSAP and jQuery',
+  //   'Integrate with RESTful API via AJAX / JSON',
+  //   'Manage code quality using ESLint',
+  //   'Understand ES6 language features',
+  //   'Collaborate with the team to develop large-scale projects using Typescript'
+  //   ]
+  // // },
+  // {
+  //   name: 'React',
+  //   en_name: 'React',
+  //   details: ['使用 Create React App 完成新專案建立 ', '使用 React Hook ', '使用 Context 以及 props 進行元件間的溝通', '以此完成 todo list 等小工具'],
+  //   en_details: [    'Complete new project setup using Create React App',
+  //   'Utilize React Hooks',
+  //   'Communicate between components using Context and props',
+  //   'Implemented features such as todo lists and other small tools']
+  // },
   {
     name: 'WebLayout',
     en_name: 'WebLayout',
-    details: ['熟悉 HTML 5, CSS 3, Scss', 'RWD 響應式網頁規劃 ( 手刻 / 套件皆有 )', '熟悉 Bootstrap 5 ','熟悉 Tailwind CSS', '熟悉 element UI 使用'],
+    details: ['使用 Bootstrap 5', '使用 Tailwind CSS ', '使用 element Plus','使用 SCSS ', '孰悉 RWD 響應式網頁  ( 純手刻/套件 )','使用語意化標籤提升網頁可讀性', '使用  CSS3, jQuery, GSAP, Animation.css 實作網頁動畫效果'],
     en_details: [
-    'Familiar with HTML 5, CSS 3, SCSS',
-    'Responsive web design planning (both hand-coding and utilizing frameworks/libraries)',
-    'Proficient in Bootstrap 5',
-    'Proficient in Tailwind CSS',
-    'Proficient in using Element UI'
+    'Use Bootstrap 5 ',
+    'Use Tailwind CSS ',
+    'Use SCSS ',
+    'Familiar with RWD responsive web design (pure hand-coded/packages) ',
+    'Implement web page animation effects using CSS3, jQuery, GSAP, Animation.css '
     ]
   },
   {
-    name: 'Git',
-    en_name: 'Git',
-    details: ['使用 GitHub Page 部屬靜態網頁','孰悉 Git 指令 ', '使用 sourcetree 版本控制介面 ', '團隊合作，共同使用 Git 開發＆維護大型專案'], 
+    name: 'Others',
+    en_name: 'Others',
+    details: ['使用 React.js 開發 todo list 等小工具', '使用 Git 進行版本控制', '可自行閱讀技術文件','JIRA 專案管理','Figma, Adobe XD 基本操作', '基礎 Linux 語法', '基礎 SQL 語法', '前端單元測試 Jest 基礎語法研究', '前端框架 svelte, astro 基礎研究'], 
     en_details: [
-    'Deploy static websites using GitHub Pages',
-    'Proficient in Git commands',
-    'Utilize Sourcetree as a version control interface',
-    'Collaborate within a team, utilizing Git for development and maintenance of large-scale projects'
+    'Developed small tools like a todo list using React.js',
+    'Version control using Git',
+    'Able to read technical documents independently',
+    'Project management with JIRA',
+    'Basic operations with Figma and Adobe XD',
+    'Basic Linux commands',
+    'Basic SQL commands',
+    'Basic syntax research for front-end unit testing with Jest',
+    'Basic research on front-end frameworks Svelte and Astro'
     ]
   },
   {
@@ -174,12 +179,16 @@ export const experience: aboutItem[] = [
     name: '萬點國際任職前端工程師 ( Dec 2022 ~ now )',
     en_name: 'Wonder4studio ( Dec 2022 ~ now )',
     details: [
-      '協同開發大型專案 - 龍巖公司的內外網站系統  ( nuxt 2, element ui, web components )',
-      '協同開發高雄港務局內部系統 ( vue2, vue-class-component, Typescript, echarts, vue-grid-layout )'
+      '大型殯葬業公司的內外服務系統 ( 服務商店、後台系統 ) 開發 :此為大型專案，共同開發系統的前端部分，使用 Nuxt 2 架設前端框架搭配 Element UI 組件庫以及共同狀態管理的 Vuex，並使用本地添加依賴的方法進行共用組件管理，與團隊密切合作，使其順利於有限時間內交付。 ',
+      '政府運輸業智慧平台開發:使用 Vue2 框架和相關技術，搭配 Vue-Class-Component、TypeScript、ECharts、Vue-Grid-Layout 套件開發。主要處理前端業務邏輯和數據可視化需求 。 ',
+      '雲服務廠商形象官網開發: 使用 Nuxt3 框架搭建 SSR 頁面，搭配 TypeScript、Flowbite 組件工具，建立用戶界面和功能模組 。',
+      '網路交易平台開發: 使用 Nuxt3 作為前端框架， TypeScript、Tailwind CSS, Element Plus, Pinia,  i18n 等工具進行產品前後台用戶介面的開發，除了基本開發外，過程中也擔任前端小組長，確認專案開發的進度與人力分配。過程中學習到專案管理、時程管控等經驗。',
+      '成立 Typescript 讀書會: 擔任 Typescript 讀書會小組長，為團隊內導入 Typescript 等技術，實踐前端團隊技術的迭代。'
     ],
     en_details: [
-    'Collaborated on the development of the internal and external website system for Longyan Company (using Nuxt 2, Element UI, web components)',
-    'Collaborated on the development of the internal system for Kaohsiung Port Authority (using Vue 2, Vue Class Component, Typescript, Echarts, Vue Grid Layout)'
+    'Developed internal and external service systems (service shops, backstage systems) for a large funeral industry company : This is a large-scale project, jointly developing the front-end part of the system, using Nuxt 2 to build the front-end framework with the Element UI component library and the Vuex for common state management.',
+    'Developed a government transportation industry intelligent platform: Developed using Vue2 framework and related technologies, with Vue-Class-Component, TypeScript, ECharts, and Vue-Grid-Layout packages. ',
+    'Developed an online trading platform: Using Nuxt3 as the framework, TypeScript, Tailwind CSS, Element Plus, Pinia, i18n and other tools for the development of product front-end and back-end user interfaces. In addition to basic development, also served as the leader of the front-end team, confirming the progress and manpower allocation of the project development.'
     ]
   }
 ]
